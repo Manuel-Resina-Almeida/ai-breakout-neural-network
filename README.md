@@ -20,3 +20,11 @@ The project allows evaluating a specific neural network controller visually or t
 To visualize the behavior of a specific trained network using the graphical interface, initialize the game passing the network and a seed[cite: 2]:
 ```java
 new Breakout(network, seed);
+```
+To run a fast, headless evaluation for training purposes[cite: 2]:
+```java
+BreakoutBoard b = new BreakoutBoard(network, false, seed);
+b.setSeed(i);
+b.runSimulation();
+double fitness = b.getFitness();
+```
